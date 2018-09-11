@@ -152,6 +152,13 @@ runcmd:
 Thats it. Boot the new image. Rancher Server will now recognize the host and not add a new one.
 
 
+## Optimizing Docker images for disk-less hosts
+
+You should note the size of your Docker images when you run purely in ram. The larger the image, the less memory will be available as working memory for running containers. You can also save much memory if all images running on a host share the same base image, for example the official Alpine image. Even though a base image is used by many running containers, it is still only downloaded once. Another thing you need to look at is how the services inside your Docker images are configured. Many images requires you to mount a volume if you want something else than the default configuration. To avoid adding volumes, make sure that important settings can be set with runtime environment variables.
+
+If you need inspiration on how to optimize your Docker images for diskless hosts, or if you just want a image to try out, then take a look at my images: https://hub.docker.com/u/huggla/
+
+
 ## Creating a cheep cluster of Rancher hosts
 
 Imagine that you need a server but have no money to buy one. 
@@ -163,8 +170,3 @@ In a second scenario you are working in a small office with a handful coworkers,
 So, what should you do?
 
 Well, we haven’t covered how to run Rancher Server disk-lessly (in a useful way) yet, so we still need to install it on one computer. That’s needed in both scenarios. In scenario 1, you could then, with minor preparations, boot the rest of the workstations from USB sticks and use them as Rancher hosts. In scenario 2, you could install Virtualbox on your coworkers computers and have it automatically start a virtual machine in the background when the computer starts. Each virtual machine would boot an ISO image and serve as a Rancher host. Computer resources would then be shared between server tasks and desktop tasks performed by the coworker.
-
-
-## Optimizing Docker images for disk-less hosts
-
-You should note the size of your Docker images when you run purely in ram. The larger the image, the less memory will be available as working memory for running containers. You can also save much memory if all images running on a host share the same base image, for example the official Alpine image. Even though a base image is used by many running containers, it is still only downloaded once. 
