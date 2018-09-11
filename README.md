@@ -165,3 +165,6 @@ So, what should you do?
 Well, we haven’t covered how to run Rancher Server disk-lessly (in a useful way) yet, so we still need to install it on one computer. That’s needed in both scenarios. In scenario 1, you could then, with minor preparations, boot the rest of the workstations from USB sticks and use them as Rancher hosts. In scenario 2, you could install Virtualbox on your coworkers computers and have it automatically start a virtual machine in the background when the computer starts. Each virtual machine would boot an ISO image and serve as a Rancher host. Computer resources would then be shared between server tasks and desktop tasks performed by the coworker.
 
 
+## Optimizing Docker images for disk-less hosts
+
+You should note the size of your Docker images when you run purely in ram. The larger the image, the less memory will be available as working memory for running containers. You can also save much memory if all images running on a host share the same base image, for example the official Alpine image. Even though a base image is used by many running containers, it is still only downloaded once. 
