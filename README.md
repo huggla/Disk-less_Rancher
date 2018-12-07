@@ -163,7 +163,7 @@ If you need inspiration on how to optimize your Docker images for diskless hosts
 
 Imagine that you need a server but have no money to buy one. 
 
-In a first scenario you do have access to a trove of unused, somewhat old, workstations, of which most lacks a hard drive. 
+In a first scenario you do have access to a trove of no longer used, somewhat old, workstations, of which most lacks a hard drive. 
 
 In a second scenario you are working in a small office with a handful coworkers, all with a computer on their desk.
 
