@@ -74,8 +74,8 @@ Open a text editor and create your cloud-config. Save as plain text and name the
 >#cloud-config<br>
 hostname: \<A unique hostname\><br>
 rancher:<br>  
-  network:  
-    dns:  
+&emsp;&emsp;network:  
+&emsp;&emsp;&emsp;&emsp;dns:  
       nameservers:  
       - \<Add nameserver ip!\>         
       search:   
