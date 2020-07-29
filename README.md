@@ -95,7 +95,8 @@ rancher:<br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;privileged: true<br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;volumes:<br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;- /var/run/docker.sock:/var/run/docker.sock
-      
+
+
 ##### Editing the iso
 
 To be able to edit the otherwise read only ISO file we need to install a tool. I use ISO Master which is available for both Linux and Windows. 
