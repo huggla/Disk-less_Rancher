@@ -71,9 +71,9 @@ If you are totally new to cloud-configs you should now take a moment to read abo
 
 Open a text editor and create your cloud-config. Save as plain text and name the file user_data. Below is cloud-config template you can use as a starting point. The host registration url is part of the host registration command you got from the Rancher Server web GUI earlier (if the server is still running).
 
->#cloud-config
-hostname: \<A unique hostname\>            
-rancher:  
+>#cloud-config<br>
+hostname: \<A unique hostname\><br>
+rancher:<br>  
   network:  
     dns:  
       nameservers:  
