@@ -84,17 +84,17 @@ rancher:<br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;eth0:<br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;address: \<Add host ip or remove!\><br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;gateway: \<Add gateway or remove!\><br>
-        dhcp: \<Set false or true!\>
-        mtu: \<Set mtu or remove!\>                     
-  services:   
-    rancher-agent1:   
-      command: \<Host registration url\>                                                                    
-      image: rancher/agent                                                                                                                                                  
-      environment:  
-      - CATTLE_HOST_LABELS=\<Add label key!\>=\<Add label value!\>                                                                                            
-      privileged: true  
-      volumes:  
-      - /var/run/docker.sock:/var/run/docker.sock
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;dhcp: \<Set false or true!\><br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;mtu: \<Set mtu or remove!\><br>
+&emsp;&emsp;services:<br>
+&emsp;&emsp;&emsp;&emsp;rancher-agent1:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;command: \<Host registration url\><br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;image: rancher/agent<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;environment:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;- CATTLE_HOST_LABELS=\<Add label key!\>=\<Add label value!\><br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;privileged: true<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;volumes:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;- /var/run/docker.sock:/var/run/docker.sock
       
 ##### Editing the iso
 
