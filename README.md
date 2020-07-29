@@ -73,17 +73,17 @@ Open a text editor and create your cloud-config. Save as plain text and name the
 
 >#cloud-config<br>
 hostname: \<A unique hostname\><br>
-rancher:<br>  
-&emsp;&emsp;network:  
-&emsp;&emsp;&emsp;&emsp;dns:  
-      nameservers:  
-      - \<Add nameserver ip!\>         
-      search:   
-      - \<Add search address!\>           
-    interfaces:   
-      eth0:   
-        address: \<Add host ip or remove!\>                 
-        gateway: \<Add gateway or remove!\>
+rancher:<br>
+&emsp;&emsp;network:<br>
+&emsp;&emsp;&emsp;&emsp;dns:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;nameservers:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;- \<Add nameserver ip!\><br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;search:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;- \<Add search address!\><br>
+&emsp;&emsp;&emsp;&emsp;interfaces:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;eth0:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;address: \<Add host ip or remove!\><br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;gateway: \<Add gateway or remove!\><br>
         dhcp: \<Set false or true!\>
         mtu: \<Set mtu or remove!\>                     
   services:   
