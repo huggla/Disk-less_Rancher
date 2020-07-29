@@ -65,9 +65,9 @@ In this example we will use the rancheros.iso image file as the read only media 
 
 If you are totally new to cloud-configs you should now take a moment to read about it in the RancherOS documentation. Here is a short list of things we want to put in the cloud-config:
 
-¤ A unique hostname.
-¤ Network settings.
-¤ Docker command to pull and run Rancher Agent after boot.
+* A unique hostname.
+* Network settings.
+* Docker command to pull and run Rancher Agent after boot.
 
 Open a text editor and create your cloud-config. Save as plain text and name the file user_data. Below is cloud-config template you can use as a starting point. The host registration url is part of the host registration command you got from the Rancher Server web GUI earlier (if the server is still running).
 
