@@ -71,32 +71,31 @@ If you are totally new to cloud-configs you should now take a moment to read abo
 
 Open a text editor and create your cloud-config. Save as plain text and name the file user_data. Below is cloud-config template you can use as a starting point. The host registration url is part of the host registration command you got from the Rancher Server web GUI earlier (if the server is still running).
 
-#cloud-config
-hostname: \<A unique hostname\>                                                                                                                                                             
-rancher:                                                                                                                                                                           
-  network:                                                                                                                                                                         
-    dns:                                                                                                                                                                           
-      nameservers:                                                                                                                                                                 
-      - \<Add nameserver ip!\>                                                                                                                                                           
-      search:                                                                                                                                                                      
-      - \<Add search address!\>                                                                                                                                                            
-    interfaces:                                                                                                                                                                    
-      eth0:                                                                                                                                                                        
-        address: \<Add host ip or remove!\>                                                                                                                                                     
+>#cloud-config
+hostname: \<A unique hostname\>            
+rancher:  
+  network:  
+    dns:  
+      nameservers:  
+      - \<Add nameserver ip!\>         
+      search:   
+      - \<Add search address!\>           
+    interfaces:   
+      eth0:   
+        address: \<Add host ip or remove!\>                 
         gateway: \<Add gateway or remove!\>
         dhcp: \<Set false or true!\>
-        mtu: \<Set mtu or remove!\>                                                                                                                                                                  
-  services:                                                                                                                                                                        
-    rancher-agent1:                                                                                                                                                                
+        mtu: \<Set mtu or remove!\>                     
+  services:   
+    rancher-agent1:   
       command: \<Host registration url\>                                                                    
       image: rancher/agent                                                                                                                                                  
-      environment:                                                                                                                                                                 
+      environment:  
       - CATTLE_HOST_LABELS=\<Add label key!\>=\<Add label value!\>                                                                                            
-      privileged: true                                                                                                                                                             
-      volumes:                                                                                                                                                                     
-      - /var/run/docker.sock:/var/run/docker.sock                                                                                                                                  
-
-
+      privileged: true  
+      volumes:  
+      - /var/run/docker.sock:/var/run/docker.sock
+      
 ##### Editing the iso
 
 To be able to edit the otherwise read only ISO file we need to install a tool. I use ISO Master which is available for both Linux and Windows. 
